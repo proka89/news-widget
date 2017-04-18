@@ -1,0 +1,403 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #EEEEEE; }
+
+.telegraf-widget-wrap {
+  width: 300px;
+  height: 600px;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto; }
+  .telegraf-widget-wrap:before, .telegraf-widget-wrap:after {
+    content: "";
+    display: table; }
+  .telegraf-widget-wrap:after {
+    clear: both; }
+
+.telegraf-widget-header {
+  height: 50px;
+  background-color: transparent;
+  position: relative; }
+  .telegraf-widget-header:before, .telegraf-widget-header:after {
+    content: "";
+    display: table; }
+  .telegraf-widget-header:after {
+    clear: both; }
+
+.telegraf-widget-logo {
+  float: left;
+  padding-top: 7px;
+  padding-bottom: 7px; }
+  .telegraf-widget-logo img {
+    width: 127px;
+    height: 36px; }
+
+.telegraf-social-icons:before, .telegraf-social-icons:after {
+  content: "";
+  display: table; }
+
+.telegraf-social-icons:after {
+  clear: both; }
+
+.telegraf-social-icons ul {
+  float: right;
+  padding-top: 12px; }
+  .telegraf-social-icons ul li {
+    float: left;
+    padding-right: 10px; }
+    .telegraf-social-icons ul li a {
+      text-decoration: none;
+      color: #0c0d0d;
+      font-size: 25px; }
+      .telegraf-social-icons ul li a:hover {
+        opacity: 0.8; }
+  .telegraf-social-icons ul li:nth-child(2n) a {
+    font-size: 26px; }
+
+.telegraf-widget-nav {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 45px;
+  background-color: #ebebeb; }
+  .telegraf-widget-nav:before, .telegraf-widget-nav:after {
+    content: "";
+    display: table; }
+  .telegraf-widget-nav:after {
+    clear: both; }
+  .telegraf-widget-nav .tw-nav {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    height: 45px; }
+    .telegraf-widget-nav .tw-nav:before, .telegraf-widget-nav .tw-nav:after {
+      content: "";
+      display: table; }
+    .telegraf-widget-nav .tw-nav:after {
+      clear: both; }
+    .telegraf-widget-nav .tw-nav ul {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      height: 45px; }
+      .telegraf-widget-nav .tw-nav ul:before, .telegraf-widget-nav .tw-nav ul:after {
+        content: "";
+        display: table; }
+      .telegraf-widget-nav .tw-nav ul:after {
+        clear: both; }
+      .telegraf-widget-nav .tw-nav ul li {
+        height: 45px;
+        float: left;
+        text-align: center;
+        padding-top: 13px;
+        padding-bottom: 13px; }
+        .telegraf-widget-nav .tw-nav ul li a {
+          text-decoration: none;
+          font-size: 13px;
+          text-transform: uppercase;
+          color: #cb0000;
+          font-weight: 700; }
+      .telegraf-widget-nav .tw-nav ul li:first-child {
+        width: 15%;
+        padding-top: 9px;
+        padding-bottom: 10px;
+        padding-right: 0; }
+        .telegraf-widget-nav .tw-nav ul li:first-child a {
+          font-size: 25px; }
+      .telegraf-widget-nav .tw-nav ul li:nth-child(2n) {
+        width: 28.333%; }
+      .telegraf-widget-nav .tw-nav ul li:nth-child(3n) {
+        width: 28.333%; }
+      .telegraf-widget-nav .tw-nav ul li:last-child {
+        width: 28.333%; }
+
+.active {
+  background-color: #fff !important; }
+  .active a {
+    color: #0c0d0d !important; }
+
+.telegraf-widget-section {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  position: absolute;
+  left: -9999;
+  opacity: 0;
+  display: none; }
+  .telegraf-widget-section:before, .telegraf-widget-section:after {
+    content: "";
+    display: table; }
+  .telegraf-widget-section:after {
+    clear: both; }
+  .telegraf-widget-section h2 {
+    display: none; }
+  .telegraf-widget-section ul {
+    list-style-type: none;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .telegraf-widget-section ul li {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      position: relative; }
+
+.acitve-section {
+  display: block;
+  position: relative;
+  left: 0;
+  opacity: 1; }
+
+.telegraf-img-container {
+  width: 300px;
+  height: 137px;
+  overflow: hidden; }
+  .telegraf-img-container img {
+    max-width: 300px; }
+
+.telegraf-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 30px; }
+  .telegraf-info .title {
+    font-size: 17px;
+    line-height: 19px;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7); }
+    .telegraf-info .title:hover {
+      color: #9E9E9E; }
+
+.telegraf-news-ticker {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative; }
+  .telegraf-news-ticker:before, .telegraf-news-ticker:after {
+    content: "";
+    display: table; }
+  .telegraf-news-ticker:after {
+    clear: both; }
+
+.wrapper {
+  overflow: hidden;
+  height: 325px; }
+
+.vertical-ticker {
+  top: -325px;
+  margin-top: -325px; }
+  .vertical-ticker li {
+    position: relative !important;
+    padding: 0 10px;
+    height: 65px;
+    background-color: #fff; }
+
+a.ticker-item {
+  display: block;
+  position: relative;
+  padding: 8px 0 !important;
+  height: 65px !important;
+  overflow: hidden;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #fff; }
+  a.ticker-item .info-container {
+    float: right;
+    width: 70%; }
+  a.ticker-item .title {
+    font-size: 12.7px;
+    line-height: 15px;
+    font-weight: 700;
+    color: #000;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: -2px; }
+    a.ticker-item .title:hover {
+      color: #cb0000; }
+  a.ticker-item .ticker-img-container {
+    float: left;
+    width: 25%; }
+    a.ticker-item .ticker-img-container img {
+      display: block;
+      width: 100%;
+      height: 46px; }
+  a.ticker-item .ticker-time {
+    float: left;
+    width: 25%; }
+    a.ticker-item .ticker-time h2 {
+      font-size: 12px;
+      display: block;
+      padding-top: 18.5px;
+      padding-left: 12px;
+      color: #2674a3; }
+
+.ticker-control {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  height: 40px;
+  background-color: #F5F5F5; }
+  .ticker-control .arrow-control {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px; }
+    .ticker-control .arrow-control .up {
+      width: 6.77966%;
+      float: left;
+      margin-right: 1.69492%;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .ticker-control .arrow-control .up i {
+        font-size: 20px;
+        cursor: pointer; }
+        .ticker-control .arrow-control .up i:hover {
+          opacity: 0.7; }
+    .ticker-control .arrow-control .down {
+      width: 6.77966%;
+      float: left;
+      margin-right: 1.69492%;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .ticker-control .arrow-control .down i {
+        font-size: 20px;
+        cursor: pointer; }
+        .ticker-control .arrow-control .down i:hover {
+          opacity: 0.7; }
+    .ticker-control .arrow-control .all {
+      width: 83.05085%;
+      float: right;
+      margin-right: 0;
+      padding-top: 13px;
+      padding-bottom: 13px; }
+      .ticker-control .arrow-control .all a {
+        text-decoration: none;
+        color: #000; }
+      .ticker-control .arrow-control .all h3 {
+        font-size: 14px;
+        padding-left: 117px; }
+        .ticker-control .arrow-control .all h3 i {
+          font-size: 14px; }
+        .ticker-control .arrow-control .all h3:hover {
+          opacity: 0.7; }
+
+.najnovije-wrapper {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  height: 462px;
+  background-color: #fff; }
+  .najnovije-wrapper:before, .najnovije-wrapper:after {
+    content: "";
+    display: table; }
+  .najnovije-wrapper:after {
+    clear: both; }
+
+.sport-wrapper {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  height: 462px;
+  background-color: #fff; }
+  .sport-wrapper:before, .sport-wrapper:after {
+    content: "";
+    display: table; }
+  .sport-wrapper:after {
+    clear: both; }
+
+.jetset-wrapper {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  height: 462px;
+  background-color: #fff; }
+  .jetset-wrapper:before, .jetset-wrapper:after {
+    content: "";
+    display: table; }
+  .jetset-wrapper:after {
+    clear: both; }
+
+.vertical-ticker-sport {
+  top: -1170px;
+  margin-top: -325px; }
+  .vertical-ticker-sport li {
+    position: relative !important;
+    padding: 0 10px;
+    height: 65px;
+    background-color: #fff; }
+
+.vertical-ticker-jetset {
+  top: -1170px;
+  margin-top: -325px; }
+  .vertical-ticker-jetset li {
+    position: relative !important;
+    padding: 0 10px;
+    height: 65px;
+    background-color: #fff; }
+
+.vertical-ticker-najnovije {
+  top: -1170px;
+  margin-top: -325px; }
+  .vertical-ticker-najnovije li {
+    position: relative !important;
+    padding: 0 10px;
+    height: 65px;
+    background-color: #fff; }
+
